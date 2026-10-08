@@ -6,10 +6,10 @@
 <body>
 <main class="card wide">
     <h1>Bem-vindo, <span sec:authentication="name"></span>!</h1>
-    <p>Esta é a área de todos os usuários logados.</p>
-    <p sec:authorize="hasRole('ALUNO')" class="badge">Perfil: ALUNO</p>
-    <p sec:authorize="hasRole('PROFESSOR')" class="badge">Perfil: PROFESSOR</p>
-    <p sec:authorize="hasRole('ADMIN')" class="badge">Perfil: ADMINISTRADOR</p>
+    <p>Essa é a sua área no Portal da Escola. Caso houver dúvidas, entre em contato com o administrador.</p>
+    <p sec:authorize="hasRole('ALUNO')" class="badge">Perfil: Aluno</p>
+    <p sec:authorize="hasRole('PROFESSOR')" class="badge">Perfil: Professor</p>
+    <p sec:authorize="hasRole('ADMIN')" class="badge">Perfil: Administrador</p>
 </main>
 </body>
 </html>
