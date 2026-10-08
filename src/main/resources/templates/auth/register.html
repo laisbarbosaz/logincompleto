@@ -4,7 +4,7 @@
 <head><title>Cadastro</title></head>
 <body>
 <main class="card">
-    <h1>Criar conta de aluno</h1>
+    <h1>Criar conta</h1>
     <form th:action="@{/register}" th:object="${registerDTO}" method="post">
         <label>Nome
             <input type="text" th:field="*{name}">
@@ -25,6 +25,7 @@
         <button type="submit">Cadastrar</button>
     </form>
     <p class="link"><a th:href="@{/login}">Já tenho conta</a></p>
+    <p class="link"><a >Caso seja professor, crie a conta e solicite ao administrador autorização para acesso de professor.</a></p>
 </main>
 </body>
 </html>
