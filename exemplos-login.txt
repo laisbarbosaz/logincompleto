@@ -1,0 +1,13 @@
+Entradas de exemplo dos 3 perfis:
+
+Administrador
+Email: admin@exemplo.com
+Senha do Administrador: Admin@12345
+
+Aluno
+Email: joao@email.com
+Senha: Joaozinho13
+
+Professor:
+Email: ricardo@email.com
+Senha: Ricardo78!
