@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/base :: layout(~{::title}, ~{::main})}">
+<head><title>Acesso negado</title></head>
+<body>
+<main class="card">
+    <h1>403: Acesso negado</h1>
+    <p>Você não tem permissão para acessar esta página.</p>
+    <p class="link"><a th:href="@{/dashboard}">Voltar</a></p>
+</main>
+</body>
+</html>

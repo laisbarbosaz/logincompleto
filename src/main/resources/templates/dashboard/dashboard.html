@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      th:replace="~{layouts/base :: layout(~{::title}, ~{::main})}">
+<head><title>Início</title></head>
+<body>
+<main class="card wide">
+    <h1>Bem-vindo, <span sec:authentication="name"></span>!</h1>
+    <p>Esta é a área de todos os usuários logados.</p>
+    <p sec:authorize="hasRole('ALUNO')" class="badge">Perfil: ALUNO</p>
+    <p sec:authorize="hasRole('PROFESSOR')" class="badge">Perfil: PROFESSOR</p>
+    <p sec:authorize="hasRole('ADMIN')" class="badge">Perfil: ADMINISTRADOR</p>
+</main>
+</body>
+</html>

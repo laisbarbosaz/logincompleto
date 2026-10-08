@@ -1,0 +1,2 @@
+spring.mongodb.uri=mongodb+srv://USUARIO:SENHA@SEU_CLUSTER.mongodb.net/loginseguro?retryWrites=true&w=majority
+app.admin.password=TROQUE_ESTA_SENHA

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/base :: layout(~{::title}, ~{::main})}">
+<head><title>Cadastro</title></head>
+<body>
+<main class="card">
+    <h1>Criar conta de aluno</h1>
+    <form th:action="@{/register}" th:object="${registerDTO}" method="post">
+        <label>Nome
+            <input type="text" th:field="*{name}">
+            <span class="field-error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+        </label>
+        <label>E-mail
+            <input type="email" th:field="*{email}">
+            <span class="field-error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+        </label>
+        <label>Senha
+            <input type="password" th:field="*{password}">
+            <span class="field-error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+        </label>
+        <label>Confirmar senha
+            <input type="password" th:field="*{confirmPassword}">
+            <span class="field-error" th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}"></span>
+        </label>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <p class="link"><a th:href="@{/login}">Já tenho conta</a></p>
+</main>
+</body>
+</html>
